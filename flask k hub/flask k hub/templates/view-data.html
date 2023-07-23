@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualization</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Data Table</h1>
+    {{ table | safe }}
+
+    <h2>Pie Chart</h2>
+    <img src="data:image/png;base64,{{ pie_plot_base64 }}" alt="Pie Chart">
+
+    <h2>Bar Plot</h2>
+    <img src="data:image/png;base64,{{ bar_plot_base64 }}" alt="Bar Plot">
+</body>
+</html>
